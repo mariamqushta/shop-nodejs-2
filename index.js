@@ -11,11 +11,10 @@ const app = express();
 const port=process.env.PORT||3000;
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "https://shop-nodejs-2.vercel.app",
-     
-    ], // Allow only your frontend
+   origin: [
+    "http://localhost:3000",                // local frontend
+    "https://shop-react-2.vercel.app"      // deployed frontend
+  ], // Allow only your frontend
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"], // Allowed methods
     allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
     credentials: true, // Allow credentials
@@ -43,6 +42,7 @@ ConnectToDB()
 app.listen(port,()=>{
     console.log(`app work on port ${port}`)
 });
+
 
 
 
