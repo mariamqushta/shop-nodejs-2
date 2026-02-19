@@ -13,7 +13,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://shop-nodejs-2.vercel.app/",
+      "https://shop-nodejs-2.vercel.app",
      
     ], // Allow only your frontend
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"], // Allowed methods
@@ -43,6 +43,7 @@ ConnectToDB()
 app.listen(port,()=>{
     console.log(`app work on port ${port}`)
 });
+
 
 
 
